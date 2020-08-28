@@ -1,0 +1,32 @@
+#--------------------Phasespace actors for use with realistic trackers---------------------#
+/gate/actor/addActor PhaseSpaceActor               entering11
+/gate/actor/entering11/save                     ../output/entering11_DTC_{rotation}.root
+/gate/actor/entering11/attachTo                 tracker_1
+/gate/actor/entering11/storeOutgoingParticles  false
+/gate/actor/entering11/addFilter               IDFilter
+/gate/actor/entering11/IDFilter/selectID       1
+
+/gate/actor/addActor PhaseSpaceActor               entering12
+/gate/actor/entering12/save                     ../output/entering12_DTC_{rotation}.root
+/gate/actor/entering12/attachTo                 tracker_2
+/gate/actor/entering12/storeOutgoingParticles  false
+/gate/actor/entering12/addFilter               IDFilter
+/gate/actor/entering12/IDFilter/selectID       1
+
+/gate/actor/addActor PhaseSpaceActor               exiting21
+/gate/actor/exiting21/save                     ../output/exiting21_DTC_{rotation}.root
+/gate/actor/exiting21/attachTo                 alpideAct3
+/gate/actor/exiting21/storeOutgoingParticles  true
+/gate/actor/exiting21/addFilter               IDFilter
+/gate/actor/exiting21/IDFilter/selectID       1
+
+/gate/actor/addActor PhaseSpaceActor               exiting22
+/gate/actor/exiting22/save                     ../output/exiting22_DTC_{rotation}.root
+/gate/actor/exiting22/attachTo                 alpideAct4
+/gate/actor/exiting22/storeOutgoingParticles  true
+/gate/actor/exiting22/addFilter               IDFilter
+/gate/actor/exiting22/IDFilter/selectID       1
+
+#--------------------Kill actor (Reduce simulation time)-------------------------#
+/gate/actor/addActor KillActor      trackKiller
+/gate/actor/trackKiller/attachTo         trackKilled

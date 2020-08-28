@@ -1,0 +1,56 @@
+# MA beam line test
+
+# Nozzle exit to Isocenter distance
+500
+# SMX to Isocenter distance
+6600
+# SMY to Isocenter distance
+6600
+
+#========ENERGY=========#
+# mean energy
+# polynomial order
+0
+# polynomial parameters (highest to lowest)
+230.0
+
+# energy spread
+# polynomial order
+percent
+0
+# polynomial parameters (highest to lowest), or in the case of percent
+0.0
+
+#========SPOT SIZE x y theta phi==========#
+# Spot Size x [mm]
+# polynomial order
+0
+# polynomial parameters  
+0.44
+# Spot Divergence Theta [rad]
+# polynomial order
+0
+# polynomial parameters
+0.0025
+# Spot Size y [mm]
+# polynomial order
+0
+# polynomial parameters 
+0.44
+# Spot Divergence Phi [rad]
+# polynomial order
+0
+# polynomial parameters 
+0.0025
+
+# SPOT emmittances
+# x-theta emmittance
+# polynomial order
+0
+# polynomial parameters
+0.003
+# y-phi emmittance
+# polynomial order
+0
+# polynomial parameters
+0.003

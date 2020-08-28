@@ -1,0 +1,548 @@
+#******************Full DTC description******************
+#root output is defined at the very end, make sure to comment or uncomment what you want to read out from
+#---------------------Tracker 3 (First tracker in DTC)-----------------------#
+/gate/world/daughters/name Tracker3
+/gate/world/daughters/insert box
+/gate/Tracker3/geometry/setXLength 270.0 mm
+/gate/Tracker3/geometry/setZLength 160.0 mm
+/gate/Tracker3/geometry/setYLength 2.4 mm #Total thickness of tracker
+/gate/Tracker3/placement/setTranslation 0 251.2 0 mm #Central coordinate in the world
+
+/gate/Tracker3/daughters/name absorber5 #Daughter of Tracker3
+/gate/Tracker3/daughters/insert box
+/gate/absorber5/geometry/setXLength 270.0 mm
+/gate/absorber5/geometry/setZLength 160.0 mm
+/gate/absorber5/geometry/setYLength 0.2 mm
+/gate/absorber5/placement/setTranslation 0 -1.1 0 mm
+/gate/absorber5/setMaterial cfrp
+/gate/absorber5/vis/setColor red
+
+/gate/Tracker3/daughters/name alpideGlue3
+/gate/Tracker3/daughters/insert box
+/gate/alpideGlue3/geometry/setXLength 270.0 mm
+/gate/alpideGlue3/geometry/setZLength 160.0 mm
+/gate/alpideGlue3/geometry/setYLength 0.005 mm
+/gate/alpideGlue3/placement/setTranslation 0 -0.9975 0 mm
+/gate/alpideGlue3/setMaterial Glue
+/gate/alpideGlue3/vis/setColor blue
+
+/gate/Tracker3/daughters/name alpideSub3
+/gate/Tracker3/daughters/insert box
+/gate/alpideSub3/geometry/setXLength 270.0 mm
+/gate/alpideSub3/geometry/setZLength 160.0 mm
+/gate/alpideSub3/geometry/setYLength 0.014 mm
+/gate/alpideSub3/placement/setTranslation 0 -0.988 0 mm
+/gate/alpideSub3/setMaterial Silicon
+/gate/alpideSub3/vis/setColor white
+
+/gate/Tracker3/daughters/name alpideAct3
+/gate/Tracker3/daughters/insert box
+/gate/alpideAct3/geometry/setXLength 270.0 mm
+/gate/alpideAct3/geometry/setZLength 160.0 mm
+/gate/alpideAct3/geometry/setYLength 0.025 mm
+/gate/alpideAct3/placement/setTranslation 0 -0.9575 0 mm
+/gate/alpideAct3/setMaterial Silicon
+/gate/alpideAct3/vis/setColor white
+
+/gate/Tracker3/daughters/name alpideTop3
+/gate/Tracker3/daughters/insert box
+/gate/alpideTop3/geometry/setXLength 270.0 mm
+/gate/alpideTop3/geometry/setZLength 160.0 mm
+/gate/alpideTop3/geometry/setYLength 0.011 mm
+/gate/alpideTop3/placement/setTranslation 0 -0.9685 0 mm
+/gate/alpideTop3/setMaterial Silicon
+/gate/alpideTop3/vis/setColor white
+
+/gate/Tracker3/daughters/name AirGap3
+/gate/Tracker3/daughters/insert box
+/gate/AirGap3/geometry/setXLength 270.0 mm
+/gate/AirGap3/geometry/setZLength 160.0 mm
+/gate/AirGap3/geometry/setYLength 1.63 mm
+/gate/AirGap3/placement/setTranslation 0 -0.13 0 mm
+/gate/AirGap3/setMaterial Air
+/gate/AirGap3/vis/setColor blue
+
+/gate/Tracker3/daughters/name chipCableAl3
+/gate/Tracker3/daughters/insert box
+/gate/chipCableAl3/geometry/setXLength 270.0 mm
+/gate/chipCableAl3/geometry/setZLength 160.0 mm
+/gate/chipCableAl3/geometry/setYLength 0.03 mm
+/gate/chipCableAl3/placement/setTranslation 0 0.7 0 mm
+/gate/chipCableAl3/setMaterial Aluminium
+/gate/chipCableAl3/vis/setColor red
+
+/gate/Tracker3/daughters/name chipCablePi3
+/gate/Tracker3/daughters/insert box
+/gate/chipCablePi3/geometry/setXLength 270.0 mm
+/gate/chipCablePi3/geometry/setZLength 160.0 mm
+/gate/chipCablePi3/geometry/setYLength 0.02 mm
+/gate/chipCablePi3/placement/setTranslation 0 0.725 0 mm
+/gate/chipCablePi3/setMaterial Kapton
+/gate/chipCablePi3/vis/setColor yellow
+
+/gate/Tracker3/daughters/name chipCableGlue3
+/gate/Tracker3/daughters/insert box
+/gate/chipCableGlue3/geometry/setXLength 270.0 mm
+/gate/chipCableGlue3/geometry/setZLength 160.0 mm
+/gate/chipCableGlue3/geometry/setYLength 0.005 mm
+/gate/chipCableGlue3/placement/setTranslation 0 0.7375 0 mm
+/gate/chipCableGlue3/setMaterial Glue
+/gate/chipCableGlue3/vis/setColor blue
+
+/gate/Tracker3/daughters/name topLayerAl3
+/gate/Tracker3/daughters/insert box
+/gate/topLayerAl3/geometry/setXLength 270.0 mm
+/gate/topLayerAl3/geometry/setZLength 160.0 mm
+/gate/topLayerAl3/geometry/setYLength 0.03 mm
+/gate/topLayerAl3/placement/setTranslation 0 0.755 0 mm
+/gate/topLayerAl3/setMaterial Aluminium
+/gate/topLayerAl3/vis/setColor red
+
+/gate/Tracker3/daughters/name topLayerPi3
+/gate/Tracker3/daughters/insert box
+/gate/topLayerPi3/geometry/setXLength 270.0 mm
+/gate/topLayerPi3/geometry/setZLength 160.0 mm
+/gate/topLayerPi3/geometry/setYLength 0.02 mm
+/gate/topLayerPi3/placement/setTranslation 0 0.78 0 mm
+/gate/topLayerPi3/setMaterial Kapton
+/gate/topLayerPi3/vis/setColor yellow
+
+/gate/Tracker3/daughters/name kaptonGlue3
+/gate/Tracker3/daughters/insert box
+/gate/kaptonGlue3/geometry/setXLength 270.0 mm
+/gate/kaptonGlue3/geometry/setZLength 160.0 mm
+/gate/kaptonGlue3/geometry/setYLength 0.005 mm
+/gate/kaptonGlue3/placement/setTranslation 0 0.7925 0 mm
+/gate/kaptonGlue3/setMaterial Glue
+/gate/kaptonGlue3/vis/setColor blue
+
+/gate/Tracker3/daughters/name kaptonSpacer3
+/gate/Tracker3/daughters/insert box
+/gate/kaptonSpacer3/geometry/setXLength 270.0 mm
+/gate/kaptonSpacer3/geometry/setZLength 160.0 mm
+/gate/kaptonSpacer3/geometry/setYLength 0.075 mm
+/gate/kaptonSpacer3/placement/setTranslation 0 0.8325 0 mm
+/gate/kaptonSpacer3/setMaterial Kapton
+/gate/kaptonSpacer3/vis/setColor yellow
+
+/gate/Tracker3/daughters/name bottomGlue3
+/gate/Tracker3/daughters/insert box
+/gate/bottomGlue3/geometry/setXLength 270.0 mm
+/gate/bottomGlue3/geometry/setZLength 160.0 mm
+/gate/bottomGlue3/geometry/setYLength 0.005 mm
+/gate/bottomGlue3/placement/setTranslation 0 0.8725 0 mm
+/gate/bottomGlue3/setMaterial Glue
+/gate/bottomGlue3/vis/setColor blue
+
+/gate/Tracker3/daughters/name botLayerAl3
+/gate/Tracker3/daughters/insert box
+/gate/botLayerAl3/geometry/setXLength 270.0 mm
+/gate/botLayerAl3/geometry/setZLength 160.0 mm
+/gate/botLayerAl3/geometry/setYLength 0.1 mm
+/gate/botLayerAl3/placement/setTranslation 0 0.925 0 mm
+/gate/botLayerAl3/setMaterial Aluminium
+/gate/botLayerAl3/vis/setColor red
+
+/gate/Tracker3/daughters/name botLayerPi3
+/gate/Tracker3/daughters/insert box
+/gate/botLayerPi3/geometry/setXLength 270.0 mm
+/gate/botLayerPi3/geometry/setZLength 160.0 mm
+/gate/botLayerPi3/geometry/setYLength 0.02 mm
+/gate/botLayerPi3/placement/setTranslation 0 0.985 0 mm
+/gate/botLayerPi3/setMaterial Kapton
+/gate/botLayerPi3/vis/setColor yellow
+
+/gate/Tracker3/daughters/name absorberGlue3
+/gate/Tracker3/daughters/insert box
+/gate/absorberGlue3/geometry/setXLength 270.0 mm
+/gate/absorberGlue3/geometry/setZLength 160.0 mm
+/gate/absorberGlue3/geometry/setYLength 0.005 mm
+/gate/absorberGlue3/placement/setTranslation 0 0.9975 0 mm
+/gate/absorberGlue3/setMaterial Glue
+/gate/absorberGlue3/vis/setColor blue
+
+/gate/Tracker3/daughters/name absorber6
+/gate/Tracker3/daughters/insert box
+/gate/absorber6/geometry/setXLength 270.0 mm
+/gate/absorber6/geometry/setZLength 160.0 mm
+/gate/absorber6/geometry/setYLength 0.2 mm
+/gate/absorber6/placement/setTranslation 0 1.1 0 mm
+/gate/absorber6/setMaterial cfrp
+/gate/absorber6/vis/setColor red
+
+#---------------------Tracker 4 (Second tracker in DTC)-----------------------#
+/gate/world/daughters/name Tracker4
+/gate/world/daughters/insert box
+/gate/Tracker4/geometry/setXLength 270.0 mm
+/gate/Tracker4/geometry/setZLength 160.0 mm
+/gate/Tracker4/geometry/setYLength 2.4 mm
+/gate/Tracker4/placement/setTranslation 0 301.2 0 mm # 50 mm behind the other tracker
+
+/gate/Tracker4/daughters/name absorber7
+/gate/Tracker4/daughters/insert box
+/gate/absorber7/geometry/setXLength 270.0 mm
+/gate/absorber7/geometry/setZLength 160.0 mm
+/gate/absorber7/geometry/setYLength 0.2 mm
+/gate/absorber7/placement/setTranslation 0 -1.1 0 mm
+/gate/absorber7/setMaterial cfrp
+/gate/absorber7/vis/setColor red
+
+/gate/Tracker4/daughters/name alpideGlue4
+/gate/Tracker4/daughters/insert box
+/gate/alpideGlue4/geometry/setXLength 270.0 mm
+/gate/alpideGlue4/geometry/setZLength 160.0 mm
+/gate/alpideGlue4/geometry/setYLength 0.005 mm
+/gate/alpideGlue4/placement/setTranslation 0 -0.9975 0 mm
+/gate/alpideGlue4/setMaterial Glue
+/gate/alpideGlue4/vis/setColor blue
+
+/gate/Tracker4/daughters/name alpideSub4
+/gate/Tracker4/daughters/insert box
+/gate/alpideSub4/geometry/setXLength 270.0 mm
+/gate/alpideSub4/geometry/setZLength 160.0 mm
+/gate/alpideSub4/geometry/setYLength 0.014 mm
+/gate/alpideSub4/placement/setTranslation 0 -0.988 0 mm
+/gate/alpideSub4/setMaterial Silicon
+/gate/alpideSub4/vis/setColor white
+
+/gate/Tracker4/daughters/name alpideAct4
+/gate/Tracker4/daughters/insert box
+/gate/alpideAct4/geometry/setXLength 270.0 mm
+/gate/alpideAct4/geometry/setZLength 160.0 mm
+/gate/alpideAct4/geometry/setYLength 0.025 mm
+/gate/alpideAct4/placement/setTranslation 0 -0.9575 0 mm
+/gate/alpideAct4/setMaterial Silicon
+/gate/alpideAct4/vis/setColor white
+
+/gate/Tracker4/daughters/name alpideTop4
+/gate/Tracker4/daughters/insert box
+/gate/alpideTop4/geometry/setXLength 270.0 mm
+/gate/alpideTop4/geometry/setZLength 160.0 mm
+/gate/alpideTop4/geometry/setYLength 0.011 mm
+/gate/alpideTop4/placement/setTranslation 0 -0.9685 0 mm
+/gate/alpideTop4/setMaterial Silicon
+/gate/alpideTop4/vis/setColor white
+
+/gate/Tracker4/daughters/name AirGap4
+/gate/Tracker4/daughters/insert box
+/gate/AirGap4/geometry/setXLength 270.0 mm
+/gate/AirGap4/geometry/setZLength 160.0 mm
+/gate/AirGap4/geometry/setYLength 1.63 mm
+/gate/AirGap4/placement/setTranslation 0 -0.13 0 mm
+/gate/AirGap4/setMaterial Air
+/gate/AirGap4/vis/setColor blue
+
+/gate/Tracker4/daughters/name chipCableAl4
+/gate/Tracker4/daughters/insert box
+/gate/chipCableAl4/geometry/setXLength 270.0 mm
+/gate/chipCableAl4/geometry/setZLength 160.0 mm
+/gate/chipCableAl4/geometry/setYLength 0.03 mm
+/gate/chipCableAl4/placement/setTranslation 0 0.7 0 mm
+/gate/chipCableAl4/setMaterial Aluminium
+/gate/chipCableAl4/vis/setColor red
+
+/gate/Tracker4/daughters/name chipCablePi4
+/gate/Tracker4/daughters/insert box
+/gate/chipCablePi4/geometry/setXLength 270.0 mm
+/gate/chipCablePi4/geometry/setZLength 160.0 mm
+/gate/chipCablePi4/geometry/setYLength 0.02 mm
+/gate/chipCablePi4/placement/setTranslation 0 0.725 0 mm
+/gate/chipCablePi4/setMaterial Kapton
+/gate/chipCablePi4/vis/setColor yellow
+
+/gate/Tracker4/daughters/name chipCableGlue4
+/gate/Tracker4/daughters/insert box
+/gate/chipCableGlue4/geometry/setXLength 270.0 mm
+/gate/chipCableGlue4/geometry/setZLength 160.0 mm
+/gate/chipCableGlue4/geometry/setYLength 0.005 mm
+/gate/chipCableGlue4/placement/setTranslation 0 0.7375 0 mm
+/gate/chipCableGlue4/setMaterial Glue
+/gate/chipCableGlue4/vis/setColor blue
+
+/gate/Tracker4/daughters/name topLayerAl4
+/gate/Tracker4/daughters/insert box
+/gate/topLayerAl4/geometry/setXLength 270.0 mm
+/gate/topLayerAl4/geometry/setZLength 160.0 mm
+/gate/topLayerAl4/geometry/setYLength 0.03 mm
+/gate/topLayerAl4/placement/setTranslation 0 0.755 0 mm
+/gate/topLayerAl4/setMaterial Aluminium
+/gate/topLayerAl4/vis/setColor red
+
+/gate/Tracker4/daughters/name topLayerPi4
+/gate/Tracker4/daughters/insert box
+/gate/topLayerPi4/geometry/setXLength 270.0 mm
+/gate/topLayerPi4/geometry/setZLength 160.0 mm
+/gate/topLayerPi4/geometry/setYLength 0.02 mm
+/gate/topLayerPi4/placement/setTranslation 0 0.78 0 mm
+/gate/topLayerPi4/setMaterial Kapton
+/gate/topLayerPi4/vis/setColor yellow
+
+/gate/Tracker4/daughters/name kaptonGlue4
+/gate/Tracker4/daughters/insert box
+/gate/kaptonGlue4/geometry/setXLength 270.0 mm
+/gate/kaptonGlue4/geometry/setZLength 160.0 mm
+/gate/kaptonGlue4/geometry/setYLength 0.005 mm
+/gate/kaptonGlue4/placement/setTranslation 0 0.7925 0 mm
+/gate/kaptonGlue4/setMaterial Glue
+/gate/kaptonGlue4/vis/setColor blue
+
+/gate/Tracker4/daughters/name kaptonSpacer4
+/gate/Tracker4/daughters/insert box
+/gate/kaptonSpacer4/geometry/setXLength 270.0 mm
+/gate/kaptonSpacer4/geometry/setZLength 160.0 mm
+/gate/kaptonSpacer4/geometry/setYLength 0.075 mm
+/gate/kaptonSpacer4/placement/setTranslation 0 0.8325 0 mm
+/gate/kaptonSpacer4/setMaterial Kapton
+/gate/kaptonSpacer4/vis/setColor yellow
+
+/gate/Tracker4/daughters/name bottomGlue4
+/gate/Tracker4/daughters/insert box
+/gate/bottomGlue4/geometry/setXLength 270.0 mm
+/gate/bottomGlue4/geometry/setZLength 160.0 mm
+/gate/bottomGlue4/geometry/setYLength 0.005 mm
+/gate/bottomGlue4/placement/setTranslation 0 0.8725 0 mm
+/gate/bottomGlue4/setMaterial Glue
+/gate/bottomGlue4/vis/setColor blue
+
+/gate/Tracker4/daughters/name botLayerAl4
+/gate/Tracker4/daughters/insert box
+/gate/botLayerAl4/geometry/setXLength 270.0 mm
+/gate/botLayerAl4/geometry/setZLength 160.0 mm
+/gate/botLayerAl4/geometry/setYLength 0.1 mm
+/gate/botLayerAl4/placement/setTranslation 0 0.925 0 mm
+/gate/botLayerAl4/setMaterial Aluminium
+/gate/botLayerAl4/vis/setColor red
+
+/gate/Tracker4/daughters/name botLayerPi4
+/gate/Tracker4/daughters/insert box
+/gate/botLayerPi4/geometry/setXLength 270.0 mm
+/gate/botLayerPi4/geometry/setZLength 160.0 mm
+/gate/botLayerPi4/geometry/setYLength 0.02 mm
+/gate/botLayerPi4/placement/setTranslation 0 0.985 0 mm
+/gate/botLayerPi4/setMaterial Kapton
+/gate/botLayerPi4/vis/setColor yellow
+
+/gate/Tracker4/daughters/name absorberGlue4
+/gate/Tracker4/daughters/insert box
+/gate/absorberGlue4/geometry/setXLength 270.0 mm
+/gate/absorberGlue4/geometry/setZLength 160.0 mm
+/gate/absorberGlue4/geometry/setYLength 0.005 mm
+/gate/absorberGlue4/placement/setTranslation 0 0.9975 0 mm
+/gate/absorberGlue4/setMaterial Glue
+/gate/absorberGlue4/vis/setColor blue
+
+/gate/Tracker4/daughters/name absorber8
+/gate/Tracker4/daughters/insert box
+/gate/absorber8/geometry/setXLength 270.0 mm
+/gate/absorber8/geometry/setZLength 160.0 mm
+/gate/absorber8/geometry/setYLength 0.2 mm
+/gate/absorber8/placement/setTranslation 0 1.1 0 mm
+/gate/absorber8/setMaterial cfrp
+/gate/absorber8/vis/setColor red
+
+#---------------DTC - with root output------------------#
+#--------------------Scanner----------------------------#
+/gate/world/daughters/name Scanner1
+/gate/world/daughters/systemType scanner
+/gate/world/daughters/insert box
+/gate/Scanner1/geometry/setXLength 270.0 mm
+/gate/Scanner1/geometry/setZLength 160.0 mm
+/gate/Scanner1/geometry/setYLength 225.5 mm #Covering the entire depth of the DTC (layer thickness*#layers)
+/gate/Scanner1/placement/setTranslation 0 463.95 0 mm #Move the placement of the DTC front to 5cm after the second tracker
+
+#--------------------DTC----------------------------#
+/gate/Scanner1/daughters/name DTC
+/gate/Scanner1/daughters/insert box
+/gate/DTC/geometry/setXLength 270.0 mm
+/gate/DTC/geometry/setZLength 160.0 mm
+/gate/DTC/geometry/setYLength 5.5 mm #Thickness of layer to be repeated
+/gate/DTC/placement/setTranslation 0 2.75 0 mm
+/gate/DTC/repeaters/insert linear
+/gate/DTC/linear/setRepeatNumber 41
+/gate/DTC/linear/setRepeatVector 0. 5.5 0. mm #same as thickness of layer 
+/gate/DTC/vis/setVisible false
+
+/gate/DTC/daughters/name absorber
+/gate/DTC/daughters/insert box
+/gate/absorber/geometry/setXLength 270.0 mm
+/gate/absorber/geometry/setZLength 160.0 mm
+/gate/absorber/geometry/setYLength 3.5 mm
+/gate/absorber/placement/setTranslation 0 -1.0 0 mm
+/gate/absorber/setMaterial Aluminium
+/gate/absorber/vis/setColor red
+
+/gate/DTC/daughters/name alpideGlue
+/gate/DTC/daughters/insert box
+/gate/alpideGlue/geometry/setXLength 270.0 mm
+/gate/alpideGlue/geometry/setZLength 160.0 mm
+/gate/alpideGlue/geometry/setYLength 0.005 mm
+/gate/alpideGlue/placement/setTranslation 0 0.7525 0 mm
+/gate/alpideGlue/setMaterial Glue
+/gate/alpideGlue/vis/setColor blue
+
+/gate/DTC/daughters/name alpidesub
+/gate/DTC/daughters/insert box
+/gate/alpidesub/geometry/setXLength 270.0 mm
+/gate/alpidesub/geometry/setZLength 160.0 mm
+/gate/alpidesub/geometry/setYLength 0.064 mm
+/gate/alpidesub/placement/setTranslation 0 0.787 0 mm
+/gate/alpidesub/setMaterial Silicon
+/gate/alpidesub/vis/setColor white
+
+/gate/DTC/daughters/name alpideact
+/gate/DTC/daughters/insert box
+/gate/alpideact/geometry/setXLength 270.0 mm
+/gate/alpideact/geometry/setZLength 160.0 mm
+/gate/alpideact/geometry/setYLength 0.025 mm
+/gate/alpideact/placement/setTranslation 0 0.8315 0 mm
+/gate/alpideact/setMaterial Silicon
+/gate/alpideact/vis/setColor white
+
+/gate/DTC/daughters/name alpidefront
+/gate/DTC/daughters/insert box
+/gate/alpidefront/geometry/setXLength 270.0 mm
+/gate/alpidefront/geometry/setZLength 160.0 mm
+/gate/alpidefront/geometry/setYLength 0.011 mm
+/gate/alpidefront/placement/setTranslation 0 0.8495 0 mm
+/gate/alpidefront/setMaterial Silicon
+/gate/alpidefront/vis/setColor white
+
+/gate/DTC/daughters/name AirGap
+/gate/DTC/daughters/insert box
+/gate/AirGap/geometry/setXLength 270.0 mm
+/gate/AirGap/geometry/setZLength 160.0 mm
+/gate/AirGap/geometry/setYLength 1.58 mm
+/gate/AirGap/placement/setTranslation 0 1.645 0 mm
+/gate/AirGap/setMaterial Air
+/gate/AirGap/vis/setColor blue
+
+/gate/DTC/daughters/name chipCableAl
+/gate/DTC/daughters/insert box
+/gate/chipCableAl/geometry/setXLength 270.0 mm
+/gate/chipCableAl/geometry/setZLength 160.0 mm
+/gate/chipCableAl/geometry/setYLength 0.03 mm
+/gate/chipCableAl/placement/setTranslation 0 2.450 0 mm
+/gate/chipCableAl/setMaterial Aluminium
+/gate/chipCableAl/vis/setColor red
+
+/gate/DTC/daughters/name chipCablePi
+/gate/DTC/daughters/insert box
+/gate/chipCablePi/geometry/setXLength 270.0 mm
+/gate/chipCablePi/geometry/setZLength 160.0 mm
+/gate/chipCablePi/geometry/setYLength 0.02 mm
+/gate/chipCablePi/placement/setTranslation 0 2.475 0 mm
+/gate/chipCablePi/setMaterial Kapton
+/gate/chipCablePi/vis/setColor yellow
+
+/gate/DTC/daughters/name chipCableGlue
+/gate/DTC/daughters/insert box
+/gate/chipCableGlue/geometry/setXLength 270.0 mm
+/gate/chipCableGlue/geometry/setZLength 160.0 mm
+/gate/chipCableGlue/geometry/setYLength 0.005 mm
+/gate/chipCableGlue/placement/setTranslation 0 2.4875 0 mm
+/gate/chipCableGlue/setMaterial Glue
+/gate/chipCableGlue/vis/setColor blue
+
+/gate/DTC/daughters/name topLayerAl
+/gate/DTC/daughters/insert box
+/gate/topLayerAl/geometry/setXLength 270.0 mm
+/gate/topLayerAl/geometry/setZLength 160.0 mm
+/gate/topLayerAl/geometry/setYLength 0.030 mm
+/gate/topLayerAl/placement/setTranslation 0 2.505 0 mm
+/gate/topLayerAl/setMaterial Aluminium
+/gate/topLayerAl/vis/setColor red
+
+/gate/DTC/daughters/name topLayerPi
+/gate/DTC/daughters/insert box
+/gate/topLayerPi/geometry/setXLength 270.0 mm
+/gate/topLayerPi/geometry/setZLength 160.0 mm
+/gate/topLayerPi/geometry/setYLength 0.020 mm
+/gate/topLayerPi/placement/setTranslation 0 2.530 0 mm
+/gate/topLayerPi/setMaterial Kapton
+/gate/topLayerPi/vis/setColor yellow
+
+/gate/DTC/daughters/name kaptonGlue
+/gate/DTC/daughters/insert box
+/gate/kaptonGlue/geometry/setXLength 270.0 mm
+/gate/kaptonGlue/geometry/setZLength 160.0 mm
+/gate/kaptonGlue/geometry/setYLength 0.005 mm
+/gate/kaptonGlue/placement/setTranslation 0 2.5425 0 mm
+/gate/kaptonGlue/setMaterial Glue
+/gate/kaptonGlue/vis/setColor blue
+
+/gate/DTC/daughters/name kaptonSpacer
+/gate/DTC/daughters/insert box
+/gate/kaptonSpacer/geometry/setXLength 270.0 mm
+/gate/kaptonSpacer/geometry/setZLength 160.0 mm
+/gate/kaptonSpacer/geometry/setYLength 0.075 mm
+/gate/kaptonSpacer/placement/setTranslation 0 2.5825 0 mm
+/gate/kaptonSpacer/setMaterial Kapton
+/gate/kaptonSpacer/vis/setColor yellow
+
+/gate/DTC/daughters/name bottomGlue
+/gate/DTC/daughters/insert box
+/gate/bottomGlue/geometry/setXLength 270.0 mm
+/gate/bottomGlue/geometry/setZLength 160.0 mm
+/gate/bottomGlue/geometry/setYLength 0.005 mm
+/gate/bottomGlue/placement/setTranslation 0 2.6225 0 mm
+/gate/bottomGlue/setMaterial Glue
+/gate/bottomGlue/vis/setColor blue
+
+/gate/DTC/daughters/name botLayerAl
+/gate/DTC/daughters/insert box
+/gate/botLayerAl/geometry/setXLength 270.0 mm
+/gate/botLayerAl/geometry/setZLength 160.0 mm
+/gate/botLayerAl/geometry/setYLength 0.1 mm
+/gate/botLayerAl/placement/setTranslation 0 2.675 0 mm
+/gate/botLayerAl/setMaterial Aluminium
+/gate/botLayerAl/vis/setColor red
+
+/gate/DTC/daughters/name botLayerPi
+/gate/DTC/daughters/insert box
+/gate/botLayerPi/geometry/setXLength 270.0 mm
+/gate/botLayerPi/geometry/setZLength 160.0 mm
+/gate/botLayerPi/geometry/setYLength 0.02 mm
+/gate/botLayerPi/placement/setTranslation 0 2.735 0 mm
+/gate/botLayerPi/setMaterial Kapton
+/gate/botLayerPi/vis/setColor yellow
+
+/gate/DTC/daughters/name absorberGlue
+/gate/DTC/daughters/insert box
+/gate/absorberGlue/geometry/setXLength 270.0 mm
+/gate/absorberGlue/geometry/setZLength 160.0 mm
+/gate/absorberGlue/geometry/setYLength 0.005 mm
+/gate/absorberGlue/placement/setTranslation 0 2.7475 0 mm
+/gate/absorberGlue/setMaterial Glue
+/gate/absorberGlue/vis/setColor blue
+
+#=====================================================
+# ATTACH SYSTEMS
+#=====================================================
+#DTC readout
+/gate/systems/Scanner1/level1/attach DTC
+#attach volumes you want readout from
+#/gate/absorber/attachCrystalSD
+#/gate/alpideGlue/attachCrystalSD
+#/gate/alpidesub/attachCrystalSD
+/gate/alpideact/attachCrystalSD #The sensitive ALPIDE volume
+#/gate/alpidefront/attachCrystalSD
+#/gate/AirGap/attachCrystalSD
+#/gate/chipCableAl/attachCrystalSD
+#/gate/chipCablePi/attachCrystalSD
+#/gate/chipCableGlue/attachCrystalSD
+#/gate/topLayerAl/attachCrystalSD
+#/gate/topLayerPi/attachCrystalSD
+#/gate/kaptonGlue/attachCrystalSD
+#/gate/kaptonSpacer/attachCrystalSD
+#/gate/bottomGlue/attachCrystalSD
+#/gate/botLayerAl/attachCrystalSD
+#/gate/botLayerPi/attachCrystalSD
+#/gate/absorberGlue/attachCrystalSD
+
+#=======================#
+# OUTPUT	        #
+#=======================#
+/gate/output/root/enable
+/gate/output/root/setRootHitFlag 1
+/gate/output/root/setRootSinglesFlag 0
+/gate/output/root/setFileName ../output/DTC_rangeFile_{rotation}.root

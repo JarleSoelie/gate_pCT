@@ -1,0 +1,17 @@
+#VIEWER#
+/vis/open OGLSQt
+#Tell the viewer to draw the volumes
+/vis/drawVolume 
+#Set the viewing angle 
+#/vis/viewer/set/viewpointThetaPhi 200 0 	
+#Refresh and update viewer
+/vis/viewer/flush 
+#The trajectories for each run should be drawn together. Don't store trajectories = 0; store trajectories = 1
+/tracking/storeTrajectory 1 	
+/vis/scene/add/trajectories
+#When storing a large amount of trajectories, this must sometimes be set high. Will slow everything down when viewing!
+/vis/ogl/set/displayListLimit 1000000
+#accumulate and show 200 trajectories
+/vis/scene/endOfEventAction accumulate 200 
+/vis/scene/add/axes         0 0 0 10 cm
+/vis/viewer/set/auxiliaryEdge true

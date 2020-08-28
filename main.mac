@@ -1,0 +1,86 @@
+#=====================================================
+# VISUALISATION
+#=====================================================
+#/control/execute visu.mac
+
+#=====================================================
+# GEOMETRY
+#=====================================================
+/gate/geometry/setMaterialDatabase GateMaterials.db
+
+#-------------------World----------------------#
+/gate/world/geometry/setXLength 1200.0 mm
+/gate/world/geometry/setYLength 1200.0 mm
+/gate/world/geometry/setZLength 1200.0 mm
+/gate/world/vis/setVisible false
+/gate/world/setMaterial Air
+
+#----------------Tracker setups--------------#
+#Uncomment and comment your tracker setups of choice
+
+/control/execute ../trackers/idealTrackers.mac
+#/control/execute ../trackers/realisticTrackers.mac
+#/control/execute ../trackers/idealTrackersCTP.mac
+#/control/execute ../trackers/realisticTrackersCTP.mac
+#/control/execute ../trackers/realisticFullDTC.mac
+
+#--------------------Phantoms---------------------#
+#Uncomment and comment your phantoms of choice
+
+#/control/execute ../phantoms/waterBox.mac
+#/control/execute ../phantoms/spotPhantom.mac
+#/control/execute ../phantoms/stepPhantom.mac
+#/control/execute ../phantoms/linePair.mac
+#/control/execute ../phantoms/sensitom.mac
+/control/execute ../phantoms/head.mac
+
+#----------Kill tracks (reduces simulation time) Do not use with full DTC simulation!------------
+/gate/world/daughters/name trackKilled
+/gate/world/daughters/insert box
+/gate/trackKilled/geometry/setXLength 1200.0 mm
+/gate/trackKilled/geometry/setYLength 1.0 mm
+/gate/trackKilled/geometry/setZLength 1200.0 mm
+/gate/trackKilled/placement/setTranslation 0 320.5 0 mm
+/gate/trackKilled/setMaterial Air
+/gate/trackKilled/vis/setColor red
+
+#=====================================================
+# ACTORS
+#=====================================================
+#--------Phasespace actors for tracker readout-----------------#
+/control/execute ../actors/idealActors.mac
+#/control/execute ../actors/realisticActors.mac
+
+#=====================================================
+# PHYSICS
+#=====================================================
+/gate/physics/addPhysicsList QBBC_EMZ
+/gate/geometry/setIonisationPotential Water 78 eV
+#=====================================================
+# INITIALISATION
+#=====================================================
+/gate/run/initialize
+
+#=======================#
+# ADD PROTON BEAM	#
+#=======================#
+#---TreatmentPlanningBeam---#
+/gate/source/addSource protonScanning TPSPencilBeam
+/gate/source/protonScanning/setParticleType proton
+#/gate/source/protonScanning/setTestFlag true #For testing and getting detailed output about the beams and spots
+/gate/source/protonScanning/setPlan PlanDescriptionToGate.txt
+/gate/source/protonScanning/setBeamConvergence false
+/gate/source/protonScanning/setSpotIntensityAsNbIons true
+/gate/source/protonScanning/setSortedSpotGenerationFlag true
+/gate/source/protonScanning/setFlatGenerationFlag true
+/gate/source/protonScanning/setSigmaEnergyInMeVFlag false
+/gate/source/protonScanning/setSourceDescriptionFile Source-Properties7mm.txt
+
+#===============#
+# START BEAMS	#
+#===============#
+#Number of primaries must be equal to spot weight multiplied by the number of spots from planDescription file
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed auto
+/gate/application/setTotalNumberOfPrimaries 9315000
+/gate/application/start

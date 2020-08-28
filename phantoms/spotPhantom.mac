@@ -1,0 +1,20 @@
+#--------------------Spot-phantom (water based)---------------------#
+/gate/world/daughters/name waterPhantom
+/gate/world/daughters/insert            box
+/gate/waterPhantom/geometry/setXLength 200.0 mm
+/gate/waterPhantom/geometry/setZLength 200.0 mm
+/gate/waterPhantom/geometry/setYLength 200.0 mm
+/gate/waterPhantom/placement/setTranslation 0 0 0 mm
+/gate/waterPhantom/setMaterial Water
+/gate/waterPhantom/vis/setVisible 1
+/gate/waterPhantom/vis/setColor blue
+
+/gate/waterPhantom/daughters/name alCubeInsert1
+/gate/waterPhantom/daughters/insert            box
+/gate/alCubeInsert1/geometry/setXLength 20.0 mm
+/gate/alCubeInsert1/geometry/setZLength 20.0 mm
+/gate/alCubeInsert1/geometry/setYLength 20.0 mm
+/gate/alCubeInsert1/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/alCubeInsert1/setMaterial Aluminium
+/gate/alCubeInsert1/vis/setVisible 1
+/gate/alCubeInsert1/vis/setColor red

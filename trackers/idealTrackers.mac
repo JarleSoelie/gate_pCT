@@ -1,0 +1,39 @@
+#--------------------Tracker 1 in system 1----------------------------#
+/gate/world/daughters/name tracker_1
+/gate/world/daughters/insert box
+/gate/tracker_1/geometry/setXLength 300.0 mm
+/gate/tracker_1/geometry/setZLength 300.0 mm
+/gate/tracker_1/geometry/setYLength 0.4 mm
+/gate/tracker_1/placement/setTranslation 0 -300.2 0 mm
+/gate/tracker_1/setMaterial Air
+/gate/tracker_1/vis/setColor green
+
+#--------------------Tracker 2 in system 1----------------------------#
+/gate/world/daughters/name tracker_2
+/gate/world/daughters/insert box
+/gate/tracker_2/geometry/setXLength 300.0 mm
+/gate/tracker_2/geometry/setZLength 300.0 mm
+/gate/tracker_2/geometry/setYLength 0.4 mm
+/gate/tracker_2/placement/setTranslation 0 -250.2 0 mm
+/gate/tracker_2/setMaterial Air
+/gate/tracker_2/vis/setColor green
+
+#---------------------Tracker 3 in tracker system 2-----------------------#
+/gate/world/daughters/name tracker3
+/gate/world/daughters/insert box
+/gate/tracker3/geometry/setXLength 300.0 mm
+/gate/tracker3/geometry/setZLength 300.0 mm
+/gate/tracker3/geometry/setYLength 0.4 mm 
+/gate/tracker3/placement/setTranslation 0 249.8 0 mm 
+/gate/tracker3/setMaterial Air
+/gate/tracker3/vis/setColor red
+
+#---------------------Tracker 4 in tracker system 2-----------------------#
+/gate/world/daughters/name tracker4
+/gate/world/daughters/insert box
+/gate/tracker4/geometry/setXLength 300.0 mm
+/gate/tracker4/geometry/setZLength 300.0 mm
+/gate/tracker4/geometry/setYLength 0.4 mm
+/gate/tracker4/placement/setTranslation 0 299.8 0 mm
+/gate/tracker4/setMaterial Air
+/gate/tracker4/vis/setColor red

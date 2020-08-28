@@ -1,0 +1,70 @@
+#--------------------Step-phantom (water based)---------------------#
+/gate/world/daughters/name waterPhantom
+/gate/world/daughters/insert            box
+/gate/waterPhantom/geometry/setXLength 200.0 mm
+/gate/waterPhantom/geometry/setZLength 200.0 mm
+/gate/waterPhantom/geometry/setYLength 200.0 mm
+/gate/waterPhantom/placement/setTranslation 0 0 0 mm
+/gate/waterPhantom/setMaterial Water
+/gate/waterPhantom/vis/setVisible 1
+/gate/waterPhantom/vis/setColor blue
+
+/gate/waterPhantom/daughters/name alCubeInsert1
+/gate/waterPhantom/daughters/insert            box
+/gate/alCubeInsert1/geometry/setXLength 10.0 mm
+/gate/alCubeInsert1/geometry/setZLength 10.0 mm
+/gate/alCubeInsert1/geometry/setYLength 10.0 mm
+/gate/alCubeInsert1/placement/setTranslation -30.0 -85.0 -30.0 mm
+/gate/alCubeInsert1/placement/setRotationAxis        0 1 0 
+/gate/alCubeInsert1/placement/setRotationAngle       5 deg
+/gate/alCubeInsert1/setMaterial Aluminium
+/gate/alCubeInsert1/vis/setVisible 1
+/gate/alCubeInsert1/vis/setColor red
+
+/gate/waterPhantom/daughters/name alCubeInsert2
+/gate/waterPhantom/daughters/insert            box
+/gate/alCubeInsert2/geometry/setXLength 10.0 mm
+/gate/alCubeInsert2/geometry/setZLength 10.0 mm
+/gate/alCubeInsert2/geometry/setYLength 10.0 mm
+/gate/alCubeInsert2/placement/setTranslation -15.0 -42.5 -15.0 mm
+/gate/alCubeInsert2/placement/setRotationAxis        0 1 0 
+/gate/alCubeInsert2/placement/setRotationAngle       5 deg
+/gate/alCubeInsert2/setMaterial Aluminium
+/gate/alCubeInsert2/vis/setVisible 1
+/gate/alCubeInsert2/vis/setColor red
+
+/gate/waterPhantom/daughters/name alCubeInsert4
+/gate/waterPhantom/daughters/insert            box
+/gate/alCubeInsert4/geometry/setXLength 10.0 mm
+/gate/alCubeInsert4/geometry/setZLength 10.0 mm
+/gate/alCubeInsert4/geometry/setYLength 10.0 mm
+/gate/alCubeInsert4/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/alCubeInsert4/placement/setRotationAxis        0 1 0 
+/gate/alCubeInsert4/placement/setRotationAngle       5 deg
+/gate/alCubeInsert4/setMaterial Aluminium
+/gate/alCubeInsert4/vis/setVisible 1
+/gate/alCubeInsert4/vis/setColor red
+
+/gate/waterPhantom/daughters/name alCubeInsert5
+/gate/waterPhantom/daughters/insert            box
+/gate/alCubeInsert5/geometry/setXLength 10.0 mm
+/gate/alCubeInsert5/geometry/setZLength 10.0 mm
+/gate/alCubeInsert5/geometry/setYLength 10.0 mm
+/gate/alCubeInsert5/placement/setTranslation 15.0 42.5 15.0 mm
+/gate/alCubeInsert5/placement/setRotationAxis        0 1 0 
+/gate/alCubeInsert5/placement/setRotationAngle       5 deg
+/gate/alCubeInsert5/setMaterial Aluminium
+/gate/alCubeInsert5/vis/setVisible 1
+/gate/alCubeInsert5/vis/setColor red
+
+/gate/waterPhantom/daughters/name alCubeInsert6
+/gate/waterPhantom/daughters/insert            box
+/gate/alCubeInsert6/geometry/setXLength 10.0 mm
+/gate/alCubeInsert6/geometry/setZLength 10.0 mm
+/gate/alCubeInsert6/geometry/setYLength 10.0 mm
+/gate/alCubeInsert6/placement/setTranslation 30.0 85.0 30.0 mm
+/gate/alCubeInsert6/placement/setRotationAxis        0 1 0 
+/gate/alCubeInsert6/placement/setRotationAngle       5 deg
+/gate/alCubeInsert6/setMaterial Aluminium
+/gate/alCubeInsert6/vis/setVisible 1
+/gate/alCubeInsert6/vis/setColor red
