@@ -4,7 +4,7 @@
 Remember to comment and uncomment the different phantoms and tracker setups inside *"main.mac"* to modify the simulations.
 There are mainly two setups in this repository, ideal (zero material budgets) and realistic (with material budgets). All setups will output phasespace files for both front tracker pair and rear tracker pair hits, but the front tracker pairs are always considered ideal and are easily disregarded in analysis of a realistic single-sided setup since they have no impact on the protons.
 
-IMPORTANT! The global coordinate system is a bit rotated: X-direction cover the sideways-positions (horizontal), y-direction covers the depth-positions(!), and z-direction covers the height positions (vertical). This is because of the TPS source and gantry rotation defined in the GATE source code. So take note of the relative placements of all objects inside the macros.
+IMPORTANT! The global coordinate system is a bit rotated: X-direction cover the sideways-positions (horizontal), y-direction covers the depth-positions(!), and z-direction covers the height positions (vertical). This is because of the TPS source and gantry rotation defined in the GATE source code. So take note of the relative placements of all objects inside the macros. All material definitions are found inside the *GateMaterials.db*.
 
 Go into the *"phantoms"* folder and extract the head.7z if you are going to use the head phantom in the simulations.
 
@@ -37,8 +37,7 @@ These define the output. <br />
 REMEMBER to set the correct number of protons (spot weight multiplied by the number of spots from planDescription file)!
 
 
-(The rotation parameter is mandatory in this simulation framework to get the correct output filenames and ensure rotation of the CTP phantoms.)
-To run a full pCT scan with the settings set in main.mac, do the following in your terminal:<br />
+(The rotation parameter is mandatory in this simulation framework to get the correct output filenames and ensure rotation of the CTP phantoms.) Run the runScan.sh shell script (remember to make it executable...) to run a full pCT scan with the settings set in main.mac.<br />
 *./runScan.sh <rotation_start> <rotation_end> <rotation_increment>*
 
 E.g. A full 360 degree scan every 2 degrees (=180 projections)<br />
