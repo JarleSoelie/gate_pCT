@@ -1,3 +1,23 @@
+#--------------------Tracker 1 in system 1----------------------------#
+/gate/world/daughters/name tracker_1
+/gate/world/daughters/insert box
+/gate/tracker_1/geometry/setXLength 300.0 mm
+/gate/tracker_1/geometry/setZLength 300.0 mm
+/gate/tracker_1/geometry/setYLength 0.4 mm
+/gate/tracker_1/placement/setTranslation 0 -275.2 0 mm
+/gate/tracker_1/setMaterial Air
+/gate/tracker_1/vis/setColor green
+
+#--------------------Tracker 2 in system 1----------------------------#
+/gate/world/daughters/name tracker_2
+/gate/world/daughters/insert box
+/gate/tracker_2/geometry/setXLength 300.0 mm
+/gate/tracker_2/geometry/setZLength 300.0 mm
+/gate/tracker_2/geometry/setYLength 0.4 mm
+/gate/tracker_2/placement/setTranslation 0 -225.2 0 mm
+/gate/tracker_2/setMaterial Air
+/gate/tracker_2/vis/setColor green
+
 #---------------------Realistic rear trackers based on DTC-----------------------#
 #---------------------Tracker 3-----------------------#
 /gate/world/daughters/name Tracker3
