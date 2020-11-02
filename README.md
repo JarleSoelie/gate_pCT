@@ -31,20 +31,20 @@ These define the output. <br />
 
 4. Define the pencil beam and TPS plan<br />
 */gate/source/protonScanning/setPlan PlanDescriptionToGate.txt*, this file contains the spot positions and weights used to radiate the phantom. The one listed is for the head phantom. Should be changed if you are using a different phantom (See Helge E.S. Pettersen for a handy python script...).<br />
-*/gate/source/protonScanning/setSourceDescriptionFile Source-Properties7mm.txt*, this is the source description (pencil beam properties) and contains the scanning magnets, energy, spot size, and divergence. The 7mm and 3mm options have been empirically found to produce a 7mm and 3mm spot size at the isocenter with the pencil beam window placed 50cm from the isocenter. Typically you want the 7mm beam... 
+*/gate/source/protonScanning/setSourceDescriptionFile Source-Properties7mm.txt*, this is the source description (pencil beam properties) and contains the scanning magnets, energy, spot size, and divergence. The 7mm and 3mm options have been empirically found to produce a 7mm and 3mm spot size at the isocenter with the pencil beam window placed 50cm from the isocenter. Typically you want the 7mm beam... <br />
 REMEMBER to set the correct number of protons (spot weight multiplied by the number of spots from planDescription file)!
 
 
-(The rotation parameter is mandatory in this simulation framework to get the correct output filenames and ensure rotation of the CTP phantoms.)
-To run a full pCT scan with the settings set in main.mac, do the following in your terminal:
+(The rotation parameter is mandatory in this simulation framework to get the correct output filenames and ensure rotation of the CTP phantoms.)<br />
+To run a full pCT scan with the settings set in main.mac, do the following in your terminal:<br />
 *./runScan.sh <rotation_start> <rotation_end> <rotation_increment>*
 
-E.g. A full 360 degree scan every 2 degrees (=180 projections)
+E.g. A full 360 degree scan every 2 degrees (=180 projections)<br />
 *./runScan.sh 0 360 2*
 
-If doing a pRad, only give it degrees to get a single projection:
-No rotation in pRad
+If doing a pRad of the water based phantoms, only give it degrees to get a single projection:<br />
+No rotation in pRad<br />
 *./runScan.sh 0 0 1*
 
-However, if doing a pRad of the head phantom from its side, rotate the head 90 degrees:
+However, if doing a pRad of the head phantom from its side, rotate the head 90 degrees:<br />
 *./runScan.sh 90 90 1*
