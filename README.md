@@ -31,7 +31,9 @@ These define the output. <br />
 
 4. Define the pencil beam and TPS plan<br />
 */gate/source/protonScanning/setPlan PlanDescriptionToGate.txt*, this file contains the spot positions and weights used to radiate the phantom. The one listed is for the head phantom. Should be changed if you are using a different phantom (See Helge E.S. Pettersen for a handy python script...).<br />
-*/gate/source/protonScanning/setSourceDescriptionFile Source-Properties7mm.txt*, this is the source description (pencil beam properties) and contains the scanning magnets, energy, spot size, and divergence. The 7mm and 3mm options have been empirically found to produce a 7mm and 3mm spot size at the isocenter with the pencil beam window placed 50cm from the isocenter. Typically you want the 7mm beam... <br />
+*/gate/source/protonScanning/setSourceDescriptionFile Source-Properties7mm.txt*, this is the source description (pencil beam properties) and contains the scanning magnets, energy, spot size, and divergence. The 7mm and 3mm options have been empirically found to produce a 7mm and 3mm spot size at the isocenter with the pencil beam window placed 50cm from the isocenter. Typically you want the 7mm beam...
+
+
 REMEMBER to set the correct number of protons (spot weight multiplied by the number of spots from planDescription file)!
 
 
