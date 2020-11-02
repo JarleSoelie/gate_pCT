@@ -10,27 +10,27 @@ Go into the *"phantoms"* folder and extract the head.7z if you are going to use 
 
 Inside the *"main.mac"* you will build your simulation, you can change (comment or uncomment) the following:
 
-1. Change tracker setups
-**idealTrackers.mac** is the basic ideal (air) tracker planes placed so that a 20cm water phantom can be placed in the center and have 15 cm distance from inner tracker pair to the edge of the phantom. 
-**idealTrackersCTP.mac** is the same as idealTrackers, but the location of the tracker planes is shifted so that the CTP (Catphan) phantoms will fit and have a 15cm distance to the tracker planes.
-**realisticTrackers.mac** is the same as idealTrackers, but the rear tracker pair is modelled after the Bergen DTC (realistic and detailed material budget). 
-**realisticTrackersCTP.mac** is the same as idealTrackersCTP, but the rear tracker pair is modelled after the Bergen DTC (realistic and detailed material budget).
+1. Change tracker setups<br />
+**idealTrackers.mac** is the basic ideal (air) tracker planes placed so that a 20cm water phantom can be placed in the center and have 15 cm distance from inner tracker pair to the edge of the phantom. <br />
+**idealTrackersCTP.mac** is the same as idealTrackers, but the location of the tracker planes is shifted so that the CTP (Catphan) phantoms will fit and have a 15cm distance to the tracker planes.<br />
+**realisticTrackers.mac** is the same as idealTrackers, but the rear tracker pair is modelled after the Bergen DTC (realistic and detailed material budget). <br />
+**realisticTrackersCTP.mac** is the same as idealTrackersCTP, but the rear tracker pair is modelled after the Bergen DTC (realistic and detailed material budget).<br />
 **realisticFullDTC.mac**, this is more special and is used for investigations into the Bergen DTC and is not directly used in simulations used in image reconstruction! This can be used to read out hits from each of the 41 layers and do all kinds of analysis and track reconstructions of interest to the Bergen DTC prototype design.
 
-2. Change phantom
-**waterBox.mac** is just a water box with dimensions 20cm x 20cm x 20cm. Used together with idealTrackers and realisticTrackers to look at most likely path (MLP) estimations.
-**spotPhantom.mac** is the same waterBox as before, but with a single 2cm x 2cm x 2cm Al cube in its center. Used to investigate pencil beam spot spacing effects.
-**stepPhantom.mac** is the same waterBox as before, but with five 1cm x 1cm x 1cm Al cubes placed at five different depths and each rotated five degrees. Used to investigate the spatial resolution of proton radiographs (pRad) with respect to depth.
-**linePair.mac** is the standardized CTP528 (line pair phantom) used for CT purposes to investigate spatial resolution.
+2. Change phantom<br />
+**waterBox.mac** is just a water box with dimensions 20cm x 20cm x 20cm. Used together with idealTrackers and realisticTrackers to look at most likely path (MLP) estimations.<br />
+**spotPhantom.mac** is the same waterBox as before, but with a single 2cm x 2cm x 2cm Al cube in its center. Used to investigate pencil beam spot spacing effects.<br />
+**stepPhantom.mac** is the same waterBox as before, but with five 1cm x 1cm x 1cm Al cubes placed at five different depths and each rotated five degrees. Used to investigate the spatial resolution of proton radiographs (pRad) with respect to depth.<br />
+**linePair.mac** is the standardized CTP528 (line pair phantom) used for CT purposes to investigate spatial resolution.<br />
 **sensitom.mac** is the standardized CTP404 (sensitom phantom) used for CT purposes to investigate relative stopping power (RSP) accuracy.
 
-3. Choose Actors
-These define the output. 
-**idealActors.mac** is for ideal trackers where each ideal tracker plane is associated with a phasespace actor used to readout positions, energy, etc...
+3. Choose Actors<br />
+These define the output. <br />
+**idealActors.mac** is for ideal trackers where each ideal tracker plane is associated with a phasespace actor used to readout positions, energy, etc...<br />
 **realisticActors.mac** is for the realistic rear trackers where the sensitive ALPIDE layers are associated with a phasespace actor.
 
-4. Define the pencil beam and TPS plan
-*/gate/source/protonScanning/setPlan PlanDescriptionToGate.txt*, this file contains the spot positions and weights used to radiate the phantom. The one listed is for the head phantom. Should be changed if you are using a different phantom (See Helge E.S. Pettersen for a handy python script...).
+4. Define the pencil beam and TPS plan<br />
+*/gate/source/protonScanning/setPlan PlanDescriptionToGate.txt*, this file contains the spot positions and weights used to radiate the phantom. The one listed is for the head phantom. Should be changed if you are using a different phantom (See Helge E.S. Pettersen for a handy python script...).<br />
 */gate/source/protonScanning/setSourceDescriptionFile Source-Properties7mm.txt*, this is the source description (pencil beam properties) and contains the scanning magnets, energy, spot size, and divergence. The 7mm and 3mm options have been empirically found to produce a 7mm and 3mm spot size at the isocenter with the pencil beam window placed 50cm from the isocenter. Typically you want the 7mm beam... 
 REMEMBER to set the correct number of protons (spot weight multiplied by the number of spots from planDescription file)!
 
