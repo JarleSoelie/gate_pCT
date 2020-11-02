@@ -1,5 +1,25 @@
+#--------------------Tracker 1 in system 1----------------------------#
+/gate/world/daughters/name tracker_1
+/gate/world/daughters/insert box
+/gate/tracker_1/geometry/setXLength 300.0 mm
+/gate/tracker_1/geometry/setZLength 300.0 mm
+/gate/tracker_1/geometry/setYLength 0.4 mm
+/gate/tracker_1/placement/setTranslation 0 -300.2 0 mm
+/gate/tracker_1/setMaterial Air
+/gate/tracker_1/vis/setColor green
+
+#--------------------Tracker 2 in system 1----------------------------#
+/gate/world/daughters/name tracker_2
+/gate/world/daughters/insert box
+/gate/tracker_2/geometry/setXLength 300.0 mm
+/gate/tracker_2/geometry/setZLength 300.0 mm
+/gate/tracker_2/geometry/setYLength 0.4 mm
+/gate/tracker_2/placement/setTranslation 0 -250.2 0 mm
+/gate/tracker_2/setMaterial Air
+/gate/tracker_2/vis/setColor green
+
 #******************Full DTC description******************
-#root output is defined at the very end, make sure to comment or uncomment what you want to read out from
+#root output is defined at the very end, make sure to comment or uncomment what you want to read out from in the ATTACH SYSTEMS block
 #---------------------Tracker 3 (First tracker in DTC)-----------------------#
 /gate/world/daughters/name Tracker3
 /gate/world/daughters/insert box
