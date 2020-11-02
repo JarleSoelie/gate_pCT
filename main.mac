@@ -15,16 +15,16 @@
 /gate/world/vis/setVisible false
 /gate/world/setMaterial Air
 
-#----------------Tracker setups--------------#
+#----------------1. Tracker setups--------------#
 #Uncomment and comment your tracker setups of choice
 
 /control/execute ./trackers/idealTrackers.mac
-#/control/execute ./trackers/realisticTrackers.mac
 #/control/execute ./trackers/idealTrackersCTP.mac
+#/control/execute ./trackers/realisticTrackers.mac
 #/control/execute ./trackers/realisticTrackersCTP.mac
 #/control/execute ./trackers/realisticFullDTC.mac
 
-#--------------------Phantoms---------------------#
+#--------------------2. Phantoms---------------------#
 #Uncomment and comment your phantoms of choice
 
 #/control/execute ./phantoms/waterBox.mac
@@ -47,7 +47,7 @@
 #=====================================================
 # ACTORS
 #=====================================================
-#--------Phasespace actors for tracker readout-----------------#
+#--------3. Phasespace actors for tracker readout-----------------#
 /control/execute ./actors/idealActors.mac
 #/control/execute ./actors/realisticActors.mac
 
@@ -64,7 +64,7 @@
 #=======================#
 # ADD PROTON BEAM	#
 #=======================#
-#---TreatmentPlanningBeam---#
+#---4. TreatmentPlanningBeam---#
 /gate/source/addSource protonScanning TPSPencilBeam
 /gate/source/protonScanning/setParticleType proton
 #/gate/source/protonScanning/setTestFlag true #For testing and getting detailed output about the beams and spots
