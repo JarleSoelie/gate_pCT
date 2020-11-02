@@ -37,7 +37,7 @@ These define the output. <br />
 REMEMBER to set the correct number of protons (spot weight multiplied by the number of spots from planDescription file)!
 
 
-(The rotation parameter is mandatory in this simulation framework to get the correct output filenames and ensure rotation of the CTP phantoms.)<br />
+(The rotation parameter is mandatory in this simulation framework to get the correct output filenames and ensure rotation of the CTP phantoms.)
 To run a full pCT scan with the settings set in main.mac, do the following in your terminal:<br />
 *./runScan.sh <rotation_start> <rotation_end> <rotation_increment>*
 
